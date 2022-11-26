@@ -1,8 +1,8 @@
+let countEl = document.getElementById('count_el')
+let total = document.getElementById('passengers')
+let additional = document.getElementById('additional')
 
 let count = 0
-
-let countEl = document.getElementById('count_el')
-
 function increment() {
     count = count + 1
     countEl.innerHTML = count
@@ -12,17 +12,19 @@ function increment() {
 let database = []
 
 function save() {
- 
-// 1. Save the value of counter and the current time as an object inside the database
- // 2. Print out the difference between the last value of database and the current value
+
 let lastDbRecord = database[database.length - 1]
-let last = lastDbRecord?.numberOfPassenger ||  0
+let previous = lastDbRecord?.numberOfPassenger ||  0
  const data = {
-    numberOfPassenger: count,
+    numberOfPassenger: previous + count,
     time: new Date(),
-    additionalPassengers: count - last
+    additionalPassengers: count
 }
 database.push(data)
+total.innerHTML = data.numberOfPassenger
+additional.innerHTML = data.additionalPassengers
+count = 0
+countEl.innerHTML = count
 
  console.log(database, `record of passengers as at ${new Date().getMinutes}`)   
 }
