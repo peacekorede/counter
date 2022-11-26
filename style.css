@@ -1,0 +1,39 @@
+body{
+    margin: auto;
+    font-family: sans-serif;
+    background-color: rgb(236, 255, 255);
+}
+
+.main_page{
+    margin: 3rem 4rem;
+}
+
+#header{
+  border: 0.4rem solid black;
+  padding: 0.6rem;
+  max-width: 20%;
+}
+
+#count_el{
+  border: 0.4rem solid black;
+  padding: 0.6rem 1.6rem;
+  max-width: 1%;
+}
+
+#increment_btn{
+    border: 0.4rem solid black;
+    padding: 0.6rem;
+    max-width: 20%;
+    font-size: medium;
+    font-weight: 700;
+    background-color: rgb(236, 255, 255);
+}
+
+#save_btn{
+    border: 0.4rem solid black;
+    padding: 0.6rem;
+    max-width: 20%;
+    font-size: medium;
+    font-weight: 700;
+    background-color: rgb(236, 255, 255);
+}
